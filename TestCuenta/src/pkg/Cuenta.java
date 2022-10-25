@@ -48,13 +48,21 @@ public class Cuenta {
 	}
 	
 	public double ingreso(double cant) {
-		
-		return 50;
+		saldo+=cant;
+		return saldo;
 	}
 
-	public double reintegro(double cant) {
+	public double reintegro(double cant) throws Exception {
 		
-		return 45;
+		if(cant <= 0) {
+			throw new Exception("No se puede retirar un valor igual o menor a 0");
+		}
+		if(saldo>=cant) {
+			saldo-=cant;
+		}else {
+			throw new Exception("No hay saldo suficiente");
+		}
+		return saldo;
 	}
 	
 
