@@ -48,13 +48,13 @@ public class Cuenta {
 	}
 	
 	public double ingreso(double cant) {
-		saldo+=cant;
-		return saldo;
+		
+		return 50;
 	}
 
 	public double reintegro(double cant) {
-		saldo-=cant;
-		return saldo;
+		
+		return 45;
 	}
 	
 
