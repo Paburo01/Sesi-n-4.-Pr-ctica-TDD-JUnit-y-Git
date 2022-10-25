@@ -1,3 +1,4 @@
+package pkg;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
@@ -8,11 +9,11 @@ import org.junit.jupiter.api.Test;
 
 class TestCuent {
 	
-	static Cuenta cta12345
+	static Cuenta cta12345;
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-	 cta12345=new Cuenta(String nom, int tit, Double sal);
+		cta12345=new Cuenta("pepe", "23232", 50d);
 	}
 
 	@AfterAll
@@ -29,13 +30,15 @@ class TestCuent {
 
 
 	@Test
-	void testIngreso() {
-		assertEquals(1, cta12345.Ingreso(5)); 
+	void TestReintegro() {
+		assertEquals(45, cta12345.reintegro(5)); 
 	}
 	
 	@Test
-	void TestReintegro() {
-		assertEquals(1, cta12345.Reintegro(5)); 
+	void testIngreso() {
+		assertEquals(50, cta12345.ingreso(5)); 
 	}
+	
+	
 
 }
