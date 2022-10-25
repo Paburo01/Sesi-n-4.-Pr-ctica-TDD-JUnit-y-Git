@@ -30,12 +30,12 @@ class TestCuent {
 
 
 	@Test
-	void TestReintegro() {
+	void TestReintegro() throws Exception {
 		assertEquals(45, cta12345.reintegro(5)); 
 	}
 	
 	@Test
-	void testIngreso() {
+	void testIngreso() throws Exception {
 		assertEquals(50, cta12345.ingreso(5)); 
 	}
 	

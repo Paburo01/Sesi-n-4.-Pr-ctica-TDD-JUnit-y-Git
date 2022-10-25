@@ -47,7 +47,11 @@ public class Cuenta {
 		this.mMovimientos = mMovimientos;
 	}
 	
-	public double ingreso(double cant) {
+	public double ingreso(double cant) throws Exception {
+		if(cant <= 0) {
+			throw new Exception("No se puede ingresar un valor igual o menor a 0");
+		}
+		
 		saldo+=cant;
 		return saldo;
 	}
@@ -64,6 +68,7 @@ public class Cuenta {
 		}
 		return saldo;
 	}
+	
 	
 
 }
